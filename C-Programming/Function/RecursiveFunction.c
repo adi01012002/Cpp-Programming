@@ -28,15 +28,17 @@ int main()
     /// Factorial of A number
     int n;
     scanf("%d", &n);
-    int FACT = fact(n);
-    printf("%d\n", FACT);
+    // int FACT = fact(n);
+    // printf("%d\n", FACT);
 
-    // / GCD Of Two Number
-    int a = 62, b = 8;
-    int GCD = gcd(a, b);
-    printf("%d", GCD);
+    // // / GCD Of Two Number
+    // int a = 62, b = 8;
+    // int GCD = gcd(a, b);
+    // printf("%d", GCD);
 
     /// Fibonacci Series
-    int FIBO = fibo(6);
-    printf("%d", FIBO);
+    for(int i=0;i<n;i++){ //use efor loop to print series
+    int FIBO = fibo(i);
+    printf("%d ", FIBO);
+    }
 }

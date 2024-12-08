@@ -80,7 +80,7 @@ int main()
     cout << SearchBST(a, 8);
     cout << endl;
     InsertIntoBST(a, 7);
-    InsertIntoBST(a, 13);
-    InsertIntoBST(a, 22);
+    // InsertIntoBST(a, 13);
+    // InsertIntoBST(a, 22);
     display(a);
 }
