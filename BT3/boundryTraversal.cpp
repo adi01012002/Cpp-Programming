@@ -1,5 +1,4 @@
 #include <iostream>
-#include <queue>
 using namespace std;
 class TreeNode
 {
@@ -22,34 +21,31 @@ void display(TreeNode *root)
     display(root->left);
     display(root->right);
 }
-// void levelOrder(TreeNode *root)
-// {
-//     queue<TreeNode *> q;
-//     q.push(root);
-//     while (q.size() != 0)
-//     {
-//         TreeNode *temp = q.front();
-//         cout << temp->val << " ";
-//         q.pop();
-//         if (temp->left != NULL)
-//             q.push(temp->left);
-//         if (temp->right != NULL)
-//             q.push(temp->right);
-//     }
-//     cout << endl;
-// }
-
-void levelOrderQueue(TreeNode*root){
-    queue<TreeNode*>q;
-    q.push(root);
-    while(!q.empty()){
-       auto f=q.front();
-        q.pop();
-        cout<<f->val<<" ";
-        if(f->left!=NULL)q.push(f->left);
-        if(f->right!=NULL)q.push(f->right);
-
-    }
+void leftBoundry(TreeNode *root)
+{
+    if (root == NULL)
+        return;
+    if (root->left == NULL && root->right == NULL) return;
+    cout << root->val << " ";
+    leftBoundry(root->left);
+    if (root->left == NULL)
+        leftBoundry(root->right);
+}
+void bottomBoundry(TreeNode * root){
+    if(root==NULL) return;
+    bottomBoundry(root->left);
+    if(root->left==NULL && root->right==NULL)cout<<root->val<<" ";
+    bottomBoundry(root->right);
+}
+void rightBoundry(TreeNode *root)
+{
+    if (root == NULL)
+        return;
+    if (root->left == NULL && root->right == NULL) return;
+    rightBoundry(root->right);
+    if (root->right == NULL)rightBoundry(root->left);
+    cout << root->val << " ";
+    
 }
 int main()
 {
@@ -76,7 +72,8 @@ int main()
     f->left = j;
     f->right = k;
     g->left = l;
-
-    // levelOrder(a);
-    levelOrderQueue(a);
+    // display(a);
+    leftBoundry(a);
+    bottomBoundry(a);
+    rightBoundry(a->right);
 }
