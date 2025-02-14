@@ -1,4 +1,6 @@
+#include<bits/stdc++.h>
 #include <iostream>
+#include <vector>
 using namespace std;
 class TreeNode
 {
@@ -21,31 +23,40 @@ void display(TreeNode *root)
     display(root->left);
     display(root->right);
 }
-void leftBoundry(TreeNode *root)
-{
-    if (root == NULL)
-        return;
-    if (root->left == NULL && root->right == NULL) return;
-    cout << root->val << " ";
-    leftBoundry(root->left);
-    if (root->left == NULL)
-    leftBoundry(root->right);
-}
-void bottomBoundry(TreeNode * root){
-    if(root==NULL) return;
-    bottomBoundry(root->left);
-    if(root->left==NULL && root->right==NULL)cout<<root->val<<" ";
-    bottomBoundry(root->right);
-}
-void rightBoundry(TreeNode *root)
-{
-    if (root == NULL)
-        return;
-    if (root->left == NULL && root->right == NULL) return;
-    rightBoundry(root->right);
-    if (root->right == NULL)rightBoundry(root->left);
-    cout << root->val << " ";
-    
+void topview(TreeNode*root){
+    unordered_map<int,int>m; // {level,root->val}
+    queue<pair<TreeNode*,int>>q; //{root->val,level}
+    // pair<TreeNode*int>p;
+    // p.first=root;
+    // p.second=level;
+    // q.push(p);
+    q.push({root,0});
+    while(q.size()!=0){
+        TreeNode*temp=q.front().first;
+        int level=q.front().second;
+        q.pop();
+        if(m.find(level)==m.end()){
+            m[level]=temp->val;
+        }
+        if(temp->left!=NULL){
+            q.push({temp->left,level-1});
+        }
+        if(temp->right!=NULL){
+            q.push({temp->right,level+1});
+        }
+
+    }
+    int minLevel=INT_MAX;
+    int maxLevel=INT_MIN;
+    for(auto it:m){
+        minLevel=min(minLevel,it.first);
+        maxLevel=max(maxLevel,it.first);
+    }
+    // cout<<minLevel<<"=>"<<maxLevel;
+    for(int i=minLevel;i<=maxLevel;i++){
+        cout<<m[i]<<" ";
+    }
+    cout<<endl;
 }
 int main()
 {
@@ -73,7 +84,5 @@ int main()
     f->right = k;
     g->left = l;
     // display(a);
-    leftBoundry(a);
-    bottomBoundry(a);
-    rightBoundry(a->right);
+    topview(a);
 }

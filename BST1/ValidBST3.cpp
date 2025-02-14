@@ -21,9 +21,9 @@ void display(TreeNode *root, int i, bool &flag)
     display(root->left, i, flag);
     if (i != -1)
     {
-        if (root->val > i)
+        if (root->val < i)
         {
-            cout << i << "," << root->val << "|";
+            // cout << i << "," << root->val << "|";
             flag = false;
             return;
         }
@@ -32,6 +32,32 @@ void display(TreeNode *root, int i, bool &flag)
 
     display(root->right, i, flag);
 }
+
+
+
+// void display1(TreeNode *root, int i, bool &flag)
+// {
+//     if (root == NULL)
+//         return;
+
+//     // Traverse the left subtree
+//     display1(root->left, i, flag);
+
+//     // Check if the current node violates the BST property
+//     if (flag && root->val <= i) // <= ensures strict BST property
+//     {
+//         cout << "BST Violation: " << i << " -> " << root->val << endl;
+//         flag = false; // Mark that the BST property is violated
+//         return;
+//     }
+
+//     // Update the previous value
+//     i = root->val;
+
+//     // Traverse the right subtree
+//     display1(root->right, i, flag);
+// }
+
 bool validBST(TreeNode *root)
 {
     bool flag = true;

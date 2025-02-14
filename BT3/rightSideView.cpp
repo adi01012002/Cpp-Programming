@@ -33,7 +33,6 @@ void rightSideView(TreeNode*root,vector<int>&right){
     queue<TreeNode*>q;
     q.push(root);
     while(!q.empty()){
-
         int k=q.size();
         for(int i=0;i<k;i++){
              TreeNode*temp=q.front();
@@ -61,8 +60,8 @@ void leftSideView(TreeNode *root, vector<int> &left, int currLevel)
 
     if (left[currLevel] == 0)
         left[currLevel] = root->val;
-    leftSideView(root->left, left, currLevel + 1);
     leftSideView(root->right, left, currLevel + 1);
+    leftSideView(root->left, left, currLevel + 1);
 }
 int main()
 {
@@ -96,11 +95,11 @@ int main()
     {
         cout << right[i] << " ";
     }
-    // cout<<endl;
-    //  vector<int> left(n, 0);
-    //  leftSideView(a, left, 0);
-    // for (int i = 0; i < n; i++)
-    // {
-    //     cout << left[i] << " ";
-    // }
+    cout<<endl;
+     vector<int> left(n, 0);
+     leftSideView(a, left, 0);
+    for (int i = 0; i < n; i++)
+    {
+        cout << left[i] << " ";
+    }
 }

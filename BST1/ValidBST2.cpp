@@ -14,26 +14,28 @@ public:
         this->right = NULL;
     }
 };
-void display(TreeNode *root,vector<int>&v)
+void display(TreeNode *root, vector<int> &v)
 {
     if (root == NULL)
         return;
-    display(root->left,v);
+    display(root->left, v);
     v.push_back(root->val);
-    display(root->right,v);
+    display(root->right, v);
 }
 bool validBST(TreeNode *root)
 {
-    vector<int>v;
-    bool flag=true;
-    display(root,v);
-    for(int i=1;i<v.size();i++){
-     if(v[i]<v[i-1]){
-        flag=false;
-     }
+    vector<int> v;
+    bool flag = true;
+    display(root, v);
+    for (int i = 1; i < v.size(); i++)
+    {
+        if (v[i] < v[i - 1])
+        {
+            flag = false;
+            break;
+        }
     }
     return flag;
-
 }
 int main()
 {
