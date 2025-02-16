@@ -1,21 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-void fsub(vector<int> &v,vector<int>s,int i){
-    if(i==v.size()-1){
+void subset(vector<int>s,vector<int>&v,int idx){
+    if(idx==v.size()){
         for(int i=0;i<s.size();i++){
             cout<<s[i]<<" ";
         }
         cout<<endl;
         return;
     }
-    fsub(v,s,i+1);
-    s.push_back(v[i]);
-    fsub(v,s,i+1);
+    subset(s,v,idx+1);
+    s.push_back(v[idx]);
+    subset(s,v,idx+1);
 }
 int main(){
-    vector<int>v={2,3,5};
+    vector<int>v={1,2,3};
     vector<int>s;
-    fsub(v,s,0);
-
-
+    subset(s,v,0);
 }
