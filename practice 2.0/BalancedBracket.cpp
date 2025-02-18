@@ -13,23 +13,23 @@ bool balancedBracket(string s,int idx,stack<char>&st){
 }
 int main(){
     stack<char>st;
-    string s="(((())))";
-    // bool flag=true;
-    // for(int i=0;i<s.size();i++){
-    //     if(s[i]=='(')st.push(s[i]);
-    //     else if(s[i]==')'){
-    //         if(st.empty()){
-    //             flag=false;
-    //             break;
-    //         }
-    //         else if(st.top()=='(')st.pop();
-    //     }
-    // }
+    string s="(((()))))";
+    bool flag=true;
+    for(int i=0;i<s.size();i++){
+        if(s[i]=='(')st.push(s[i]);
+        else if(s[i]==')'){
+            if(st.empty()){
+                flag=false;
+                break;
+            }
+            else if(st.top()=='(')st.pop();
+        }
+    }
     // // cout<<st.size();
-    // if(flag && st.size()==0)cout<<"Bracket is balanced";
-    // else cout<<"Bracket is not balanced";
-    // cout<<boolalpha;
-    cout<<(balancedBracket(s,0,st)?"Balanced":"Un-Balanced")<<endl;
+    if(flag && st.size()==0)cout<<"Bracket is balanced";
+    else cout<<"Bracket is not balanced";
+    cout<<boolalpha;
+    // cout<<(balancedBracket(s,0,st)?"Balanced":"Un-Balanced")<<endl;
     // (10>6?cout<<"10":cout<<"6");
     // cout<<st.size();
 }

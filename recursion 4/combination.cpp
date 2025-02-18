@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 void combination(int arr[], vector<int> v, int n, int target, int idx)
 {
@@ -27,4 +28,6 @@ int main()
     int n = sizeof(arr) / sizeof(arr[1]);
     vector<int> v;
     combination(arr, v, n, 8, 0);
+    // int a=max({4,5,9});
+    // cout<<a;
 }
