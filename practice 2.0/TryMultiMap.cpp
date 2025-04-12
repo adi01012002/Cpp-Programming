@@ -17,6 +17,9 @@ string sortByFrequency(string s){
 
 }
 int main(){
-    string s = "eeiaabbabcazzzvvv";
-    cout<<sortByFrequency(s)<<endl;
+    // string s = "eeiaabbabcazzzvvv";
+    // cout<<sortByFrequency(s)<<endl;
+    string s="abcd";
+    s.append(2,'a');
+    cout<<s;
 }

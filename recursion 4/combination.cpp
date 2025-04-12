@@ -2,11 +2,11 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-void combination(int arr[], vector<int> v, int n, int target, int idx)
+void combination(vector<int>arr, vector<int> v, int n, int target, int idx)
 {
     if (target == 0)
     {
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < v.size(); i++)
         {
             cout << v[i] << " ";
         }
@@ -24,10 +24,15 @@ void combination(int arr[], vector<int> v, int n, int target, int idx)
 }
 int main()
 {
-    int arr[] = {2, 3, 5};
-    int n = sizeof(arr) / sizeof(arr[1]);
+    // int arr[] = {2,4,5}; // this 
+    // int n = sizeof(arr) / sizeof(arr[1]);
+    vector<int>arr={2,4,5,3,4,3,2,4,5,3,2,2,3,2,3,5,5};
+    //2,4,5,3
+    sort(arr.begin(), arr.end());
+    // remove duplicates
+    arr.erase(unique(arr.begin(), arr.end()), arr.end());
     vector<int> v;
-    combination(arr, v, n, 8, 0);
+    combination(arr, v, arr.size(),8 , 0);
     // int a=max({4,5,9});
     // cout<<a;
 }

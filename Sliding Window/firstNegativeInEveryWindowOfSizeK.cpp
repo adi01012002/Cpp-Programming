@@ -3,9 +3,9 @@
 using namespace std;
 int main()
 {
-    vector<int> v = {2, -3, 4, 4, -7, -1, 4, -2, 6};
+    vector<int> v = {2,-3,4,4,7,1,4,-2,6};
     int n=v.size();
-    int k = 4;
+    int k = 3;
     int idx = -1;
     for (int i = 0; i < k; i++)
     {
@@ -42,7 +42,7 @@ int main()
         i++;
         j++;
     }
-    for(int i=0;i<ans.size();i++){
+    for(int i=0;i<ans.size();i++){ // n+k-1
         cout<<ans[i]<<" ";
     }
 }

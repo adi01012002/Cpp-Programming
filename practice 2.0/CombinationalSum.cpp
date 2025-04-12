@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 void combinationalSum(vector<int>&v,int x,vector<int>c,vector<vector<int>>&ans,int idx){
     if(x==0){
@@ -13,13 +15,15 @@ void combinationalSum(vector<int>&v,int x,vector<int>c,vector<vector<int>>&ans,i
 }
 int main(){ 
     vector<int>v={2,4,5,3,4,3,2,4,5,3,2,2,3,2,3,5,5};
-    sort(v.begin(), v.end());4d
+    //2,4,5,3
+    sort(v.begin(), v.end());
     // remove duplicates
     v.erase(unique(v.begin(), v.end()), v.end());
 
     // for(int i=0;i<v.size();i++){
     //     cout<<v[i]<<" ";
     // }
+    // cout<<endl;
     vector<int>c;
     vector<vector<int>>ans;
     combinationalSum(v,8,c,ans,0);

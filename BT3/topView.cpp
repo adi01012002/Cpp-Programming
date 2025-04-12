@@ -25,7 +25,7 @@ void display(TreeNode *root)
 }
 void topview(TreeNode*root){
     unordered_map<int,int>m; // {level,root->val}
-    queue<pair<TreeNode*,int>>q; //{root->val,level}
+    queue<pair<TreeNode*,int>>q; //{Node,level}
     // pair<TreeNode*int>p;
     // p.first=root;
     // p.second=level;
