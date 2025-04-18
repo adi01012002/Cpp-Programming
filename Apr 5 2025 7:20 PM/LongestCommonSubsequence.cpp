@@ -49,8 +49,10 @@ int LCSBuA(string s1,string s2){
 }
 
 int main(){
-    string s1="abcde";
-    string s2="aebsc";
+    // string s1="abcde";
+    // string s2="aebsc";
+    string s1="abc";
+    string s2="abnhc";
     int m=s2.size();
     int n=s1.size();
     dpt.resize(n,vector<int>(m,-1));

@@ -8,9 +8,9 @@ void generateSubstrings(string &s, int start, int end) {
         generateSubstrings(s, 0, end + 1); 
         return;
     }
-    // if(dp[start][end]==1)return; 
+    if(dp[start][end]==1)return; 
     cout << s.substr(start, end - start + 1) <<endl; 
-    // dp[start][end]=1; 
+    dp[start][end]=1; 
     generateSubstrings(s, start + 1, end);
 }
 void generate(string s){  
@@ -30,7 +30,7 @@ int main() {
     dp.resize(n, vector<int>(n, 0));
     
     generateSubstrings(s, 0, 0);
-    generate(s);
+    // generate(s);
     
     return 0;
 }

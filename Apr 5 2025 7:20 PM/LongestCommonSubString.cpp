@@ -6,7 +6,7 @@ using namespace std;
 int LCSRec(string &s1, string &s2, int i, int j, int count) {
     if (i < 0 || j < 0) return count; // Base case
     int res = count;
-    if (s1[i] == s2[j]) {
+    if (s1[i] == s2[j]){
         res = LCSRec(s1, s2, i - 1, j - 1, count + 1); // Extend the substring
     }
     // Explore other possibilities
@@ -54,10 +54,12 @@ int LCSTab(string s1,string s2){
 }
 
 int main(){
-    string s1="bbbab";
-    string s2="babbb";
-    int m=s2.size();
+    // string s1="bbbab";
+    // string s2="babbb";
+    string s1="abcd";
+    string s2="abjkcgd";
     int n=s1.size();
+    int m=s2.size();
     dp.resize(n, vector<vector<int>>(m, vector<int>(max(n, m), -1))); // Initialize DP table
     dpu.resize(n+1,vector<int>(m+1,0));  // n+1 can be n and m+1 can be m
 
