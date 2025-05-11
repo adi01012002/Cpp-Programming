@@ -24,6 +24,6 @@ void printPath(int sr, int sc, int er, int ec, string s)
 }
 int main()
 {
-    printPath(1, 1, 3, 3, "");
-    // cout << maze(0, 0, 2, 2);
+    // printPath(1, 1, 3, 3, "");
+    cout << maze(0, 0, 2, 2);
 }

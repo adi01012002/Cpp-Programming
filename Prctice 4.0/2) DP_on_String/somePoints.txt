@@ -1,0 +1,8 @@
+Here also the thinking and logic are same for the both subset of string and subsequence 
+of string but there are difference in substring is that we print the stirng from start
+to end and call start+1 below function and if start>end then we rest the start to 0 
+and end+1 and return 
+
+We are try to print all the substring from start to end and when start goes ahead of end then 
+we increment the end and reset start to 0 and again print all substring from start to end this 
+process goes on untill end reach to orginal string size then we return the function.

@@ -1,0 +1,10 @@
+for subset , subsequence or in subarray when we pass the temp or storing array 
+by address then it is required to backtrack means pop_back() to undo the change
+
+
+The Thinking process for subset and subsequence or we say code structure are same for both ,
+but for SubArray there is difference in Thinking process as well as code structure 
+in this we can call one function  simply because we have add one element but when we are 
+going to add another element we have to check for if temp array is empty i.e this is first 
+element or last element add in temp and the privious element from orginal array are same
+then we can push element and call second function

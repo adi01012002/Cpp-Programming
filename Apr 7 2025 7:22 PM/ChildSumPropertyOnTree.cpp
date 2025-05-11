@@ -41,7 +41,7 @@ bool ChildSumProperty(vector<int> v) {
 int main(){
     vector<int>v={10, 8, 2, 3, 5, -1, -1};
     cout<<boolalpha;
-    cout<<ChildSumProperty(v);
+    cout<<ChildSumProperty(v)<<endl;
 
 }
 

@@ -44,5 +44,5 @@ int fib(int n)
 }
 int main()
 {
-    fibon(6);
+    cout<<fib(6);
 }

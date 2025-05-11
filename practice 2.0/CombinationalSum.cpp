@@ -14,11 +14,11 @@ void combinationalSum(vector<int>&v,int x,vector<int>c,vector<vector<int>>&ans,i
     combinationalSum(v,x,c,ans,idx+1);
 }
 int main(){ 
-    vector<int>v={2,4,5,3,4,3,2,4,5,3,2,2,3,2,3,5,5};
+    vector<int>v={6,2,4,5};
     //2,4,5,3
-    sort(v.begin(), v.end());
+    // sort(v.begin(), v.end());
     // remove duplicates
-    v.erase(unique(v.begin(), v.end()), v.end());
+    // v.erase(unique(v.begin(), v.end()), v.end());
 
     // for(int i=0;i<v.size();i++){
     //     cout<<v[i]<<" ";
@@ -26,7 +26,7 @@ int main(){
     // cout<<endl;
     vector<int>c;
     vector<vector<int>>ans;
-    combinationalSum(v,8,c,ans,0);
+    combinationalSum(v,6,c,ans,0);
     for(int i=0;i<ans.size();i++){
         for(int j=0;j<ans[i].size();j++){
             cout<<ans[i][j]<<" ";

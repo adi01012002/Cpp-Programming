@@ -15,7 +15,7 @@ string sortByFrequency(string s) {
     }
     cout<<endl;
     // Use multimap to store frequency -> character (sorted by frequency)
-    multimap<int, char ,greater<int>> sortedMap;
+    multimap<int, string ,greater<int>> sortedMap;
 
     for (auto& p : freqMap) {
         sortedMap.insert({p.second, p.first});

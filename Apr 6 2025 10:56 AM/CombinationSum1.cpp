@@ -16,7 +16,8 @@ void combination(vector<int>v,int target,vector<int>aux,vector<vector<int>>&res,
     combination(v,target,aux,res,idx+1);
 }
 int main(){
-    vector<int>v={2,4,6,5};
+    cout<<endl;
+    vector<int>v={5,4,2,6};
     int target=6;
     vector<int>aux;
     vector<vector<int>>res;
