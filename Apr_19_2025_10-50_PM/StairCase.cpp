@@ -6,7 +6,7 @@ int StairCase(int n)
         return 1;
     if (n == 2)
         return 2;
-    return StairCase(n-1)+StairCase(n-1);
+    return StairCase(n-1)+StairCase(n-2);
 }
 int main()
 {

@@ -1,33 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//  Pure Recursion 
-// int LCS(string s1,string s2,int idx1,int idx2){
-//     if(idx1<0||idx2<0)return 0;
-//     if(s1[idx1]==s2[idx2]){
-//         return 1+LCS(s1,s2,idx1-1,idx2-1);
-//     }
-//     else{
-//         int l=LCS(s1,s2,idx1-1,idx2);
-//         int r=LCS(s1,s2,idx1,idx2-1);
-//         return max(l,r);
-//     }
-// }
+ Pure Recursion 
+int LCS(string s1,string s2,int idx1,int idx2){
+    if(idx1<0||idx2<0)return 0;
+    if(s1[idx1]==s2[idx2]){
+        return 1+LCS(s1,s2,idx1-1,idx2-1);
+    }
+    else{
+        int l=LCS(s1,s2,idx1-1,idx2);
+        int r=LCS(s1,s2,idx1,idx2-1);
+        return max(l,r);
+    }
+}
 
-// // Top Down Approach 
-// vector<vector<int>>dpt;
-// int LCSTdA(string s1,string s2,int i,int j){
-//     if(i<0||j<0)return 0;
-//     if(dpt[i][j]!=-1)return dpt[i][j];
-//     if(s1[i]==s2[j]){
-//         return dpt[i][j]=1+LCSTdA(s1,s2,i-1,j-1);
-//     }
-//     else{
-//         int l=LCSTdA(s1,s2,i-1,j);
-//         int r=LCSTdA(s1,s2,i,j-1);
-//         return dpt[i][j]=max(l,r);
-//     }
-// }
+// Top Down Approach 
+vector<vector<int>>dpt;
+int LCSTdA(string s1,string s2,int i,int j){
+    if(i<0||j<0)return 0;
+    if(dpt[i][j]!=-1)return dpt[i][j];
+    if(s1[i]==s2[j]){
+        return dpt[i][j]=1+LCSTdA(s1,s2,i-1,j-1);
+    }
+    else{
+        int l=LCSTdA(s1,s2,i-1,j);
+        int r=LCSTdA(s1,s2,i,j-1);
+        return dpt[i][j]=max(l,r);
+    }
+}
 
 // Bottom up Approach
 
@@ -73,8 +73,7 @@ int main(){
     }
 
     
-
-    
+}
     // for(int i=0;i<dp.size();i++){
     //     for(int j=0;j<dp[i].size();j++){
     //         cout<<dp[i][j]<<" ";
@@ -96,4 +95,3 @@ int main(){
 // 0 1 1 2 2 3 3 3 
 // 0 1 1 2 2 3 3 3 
 // 0 1 1 2 2 3 3 3 
-}

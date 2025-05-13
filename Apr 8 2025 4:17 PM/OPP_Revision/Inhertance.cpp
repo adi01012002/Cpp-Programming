@@ -18,13 +18,13 @@ public:
     }
 };
 int main(){
-    Animal*a=new Cat;
-    a->eat();
-    a->sound();
+    // Animal*a=new Cat;
+    // a->eat();
+    // a->sound();
     
     // This can also work
-    // Cat a;
-    // a.eat();
-    // a.sound();
+    Cat a;
+    a.eat();
+    a.sound();
 
 }
