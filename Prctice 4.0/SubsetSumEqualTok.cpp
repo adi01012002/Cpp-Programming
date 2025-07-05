@@ -36,8 +36,8 @@ bool SubSetSumEqualToKTabu(vector<int>v,int k){
 
     for(int i=1;i<=n;i++){
         for(int j=1;j<=k;j++){
-            if(v[i]<=k){
-                dpt[i][j]=dpt[i-1][j-v[i-1]];
+            if(v[i-1]<=j){
+                dpt[i][j]=dpt[i-1][j-v[i-1]]||dpt[i-1][j];
             }
             else {
                 dpt[i][j]=dpt[i-1][j];
@@ -48,7 +48,7 @@ bool SubSetSumEqualToKTabu(vector<int>v,int k){
 }
 
 int main(){
-    vector<int>v={9,4,7,5};
+    vector<int>v={9,4,2,5};
     int k=6;
     int n=v.size();
     cout<<boolalpha<<SubSetSumEqualToKRec(v,0,k)<<endl;
