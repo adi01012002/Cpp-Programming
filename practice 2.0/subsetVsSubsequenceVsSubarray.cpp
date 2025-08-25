@@ -1,5 +1,3 @@
-// Online C++ compiler to run C++ program online
-#include <iostream>
 #include<bits/stdc++.h>
 using namespace std;
 void helper(vector<int>v,int idx,vector<int>r,int k){

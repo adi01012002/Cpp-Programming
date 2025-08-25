@@ -9,7 +9,7 @@ void subsetOfString(string s,string st,int idx){
     subsetOfString(s,st+s[idx],idx+1);
     subsetOfString(s,st,idx+1);
 }
-void subSetOfVector(vector<int>v,vector<int>c,int idx){
+void subSetOfVector(vector<int>&v,vector<int>&c,int idx){
     if(idx==v.size()){
         for(int i=0;i<c.size();i++){
             cout<<c[i]<<" ";

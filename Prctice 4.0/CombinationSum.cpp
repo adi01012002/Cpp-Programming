@@ -42,10 +42,12 @@ void combinationSum3(vector<int>v,vector<int>res,vector<vector<int>>&ans,int tar
         // if(target<0)return;
         if(v[i]<=target){
             res.push_back(v[i]);
-            combinationSum3(v,res,ans,target-v[i],idx);
+            combinationSum3(v,res,ans,target-v[i],i);
             res.pop_back();
         }
     }
+
+    return;
 }
 
 void print(vector<vector<int>>ans){
@@ -59,8 +61,11 @@ void print(vector<vector<int>>ans){
 
 
 int main(){
-    vector<int>v={2,4,5,6};
-    int target=6;
+    vector<int>v={2,2,2,3};
+    int target=8;
+    sort(v.begin(), v.end());
+    // remove duplicates
+    v.erase(unique(v.begin(), v.end()), v.end());
     vector<int>res;
     vector<vector<int>>ans;
     print(ans);
