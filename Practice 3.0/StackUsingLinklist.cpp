@@ -9,8 +9,15 @@ public:
         this->next=NULL;
     }
 };
-Node*top=NULL;
+class stacks{
+    public:
+Node*top;
 int size;
+
+stacks(){
+top=NULL;
+size=0;
+}
 void Push(int val){
     Node*NewNode=new Node(val);
     NewNode->next=top;
@@ -42,22 +49,23 @@ void display(){
     cout<<endl;
     return;
 }
-
+};
 int main(){
     int choice,value;
+    stacks st;
     while (1){
         cin>>choice;
         switch (choice)
         {
             case 1:
             cin>>value;
-                Push(value);
+                st.Push(value);
                 break;
             case 2:
-                Pop();
+                st.Pop();
                 break;
             case 3:
-                display();
+                st.display();
                 break;
             case 4:
                 return 0;

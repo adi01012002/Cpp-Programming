@@ -1,0 +1,144 @@
+🔥 Array Problems with Tricks
+
+✅ 1. Reverse the Array //done
+📌 Algorithm: Two-Pointer Swap
+📌 Trick: Swap first and last, move inward until meeting in middle.
+
+✅ 2. Find Maximum and Minimum Element//  done
+📌 Algorithm: Linear Scan
+📌 Trick: Keep two variables min & max, update while traversing.
+
+✅ 3. Find Kth Max and Min Element // done
+📌 Algorithm: Sorting / Heap / QuickSelect
+📌 Trick: Use Min-Heap for Kth largest, Max-Heap for Kth smallest.
+
+✅ 4. Sort 0, 1, 2 without Sorting Algo  //done
+📌 Algorithm: Dutch National Flag
+📌 Trick: 3 Pointers → low (0), mid (1), high (2). Swap accordingly.
+
+✅ 5. Move All Negative Elements to One Side //done
+📌 Algorithm: Partition Method (like QuickSort)
+📌 Trick: Keep swapping negatives to the left using two pointers.
+
+✅ 6. Union & Intersection of Two Sorted Arrays
+📌 Algorithm: Two-Pointer Merge
+📌 Trick: Traverse both arrays like merge step in merge-sort.
+
+✅ 7. Cyclically Rotate Array by One  // done
+📌 Algorithm: Shift & Store
+📌 Trick: Store last element, shift all right, put last at index 0.
+
+✅ 8. Largest Sum Contiguous Subarray (Kadane’s Algo) //done
+📌 Algorithm: Kadane’s Algorithm
+📌 Trick: Keep running sum, reset to 0 if negative, track max.
+
+✅ 9. Minimize Maximum Difference Between Heights
+📌 Algorithm: Greedy + Sorting
+📌 Trick: Increase small elements, decrease large ones by K, minimize range.
+
+✅ 10. Minimum Jumps to Reach End
+📌 Algorithm: Greedy Jump Tracking
+📌 Trick: Track current jump range, increase jump count when exceeding range.
+
+✅ 11. Find Duplicate in Array of N+1 Integers  //done
+📌 Algorithm: Floyd’s Cycle Detection (Tortoise & Hare)
+📌 Trick: Treat array as linked list, detect cycle.
+
+✅ 12. Merge 2 Sorted Arrays Without Extra Space //done
+📌 Algorithm: Gap Method (Shell Sort Idea)
+📌 Trick: Compare elements at gap distance, shrink gap till 1.
+
+✅ 13. Kadane’s Algorithm (Very Important)  done
+📌 Same as Q8 → Max Subarray Sum.
+
+✅ 14. Merge Intervals
+📌 Algorithm: Sorting + Merge
+📌 Trick: Sort by start, merge overlapping by updating end.
+
+✅ 15. Next Permutation
+📌 Algorithm: Next Permutation Steps
+📌 Trick: Find decreasing element, swap with just larger, reverse suffix.
+
+✅ 16. Count Inversions
+📌 Algorithm: Modified Merge Sort
+📌 Trick: During merge, when right < left, add (mid - i).
+
+✅ 17. Best Time to Buy and Sell Stock
+📌 Algorithm: Greedy
+📌 Trick: Track min price so far, compute profit = price - min.
+
+✅ 18. Find All Pairs with Given Sum
+📌 Algorithm: Hashing / Two-Pointer
+📌 Trick: Use set for complement check OR sort + two-pointer.
+
+✅ 19. Common Elements in 3 Sorted Arrays
+📌 Algorithm: 3 Pointers
+📌 Trick: Move the smallest pointer forward until equal.
+
+✅ 20. Rearrange Alternating +ve and -ve (O(1) Space)
+📌 Algorithm: Partition + Rotate
+📌 Trick: First segregate, then swap alternate negatives.
+
+✅ 21. Find Subarray with Sum = 0
+📌 Algorithm: Prefix Sum + HashSet
+📌 Trick: If prefix sum repeats → subarray sum = 0.
+
+✅ 22. Factorial of Large Number
+📌 Algorithm: Array Multiplication
+📌 Trick: Store result in array/vector, simulate multiplication.
+
+✅ 23. Maximum Product Subarray
+📌 Algorithm: Dynamic Tracking of Max & Min
+📌 Trick: Track both max and min product (since negative * negative = positive).
+
+✅ 24. Longest Consecutive Subsequence
+📌 Algorithm: HashSet / Sorting
+📌 Trick: Use set and check if x-1 exists, then count streak.
+
+✅ 25. Elements Appearing More than n/k Times
+📌 Algorithm: Extended Boyer-Moore Majority Vote
+📌 Trick: At most k-1 elements can satisfy condition.
+
+✅ 26. Max Profit by Buying & Selling Stock at Most Twice
+📌 Algorithm: DP / Prefix & Suffix Max Profit
+📌 Trick: Split array into two transactions → left max + right max.
+
+✅ 27. Subset Check (One Array in Another)
+📌 Algorithm: Hashing / Two-Pointer
+📌 Trick: Store bigger array elements in set, check all of smaller.
+
+✅ 28. Triplet with Given Sum
+📌 Algorithm: Sorting + Two-Pointer
+📌 Trick: Fix one, solve 2-sum with remaining.
+
+✅ 29. Trapping Rain Water
+📌 Algorithm: Prefix & Suffix Max / Two-Pointer
+📌 Trick: Water trapped = min(leftMax, rightMax) - height[i].
+
+✅ 30. Chocolate Distribution Problem
+📌 Algorithm: Sliding Window after Sorting
+📌 Trick: Minimize max - min in a window of size m.
+
+✅ 31. Smallest Subarray with Sum > Given Value
+📌 Algorithm: Sliding Window
+📌 Trick: Expand window until sum > target, then shrink.
+
+✅ 32. Three-Way Partitioning Around a Value
+📌 Algorithm: Dutch National Flag
+📌 Trick: Partition into <, =, > in single pass.
+
+✅ 33. Min Swaps to Bring ≤ K Together
+📌 Algorithm: Sliding Window
+📌 Trick: Count “bad” elements in window, minimize swaps.
+
+✅ 34. Min Operations to Make Array Palindrome
+📌 Algorithm: Two-Pointer + Merge
+📌 Trick: Merge smaller element into neighbor until equal.
+
+✅ 35. Median of 2 Sorted Arrays (Equal Size)
+📌 Algorithm: Binary Search / Merge
+📌 Trick: Use partition method OR merge till middle.
+
+✅ 36. Median of 2 Sorted Arrays (Different Size)
+📌 Algorithm: Binary Search Partition (O(log(min(n,m))))
+📌 Trick: Balance left & right halves → maxLeft ≤ minRight.

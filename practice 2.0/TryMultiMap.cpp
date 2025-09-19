@@ -9,9 +9,13 @@ string sortByFrequency(string s){
     for(auto p :freqMap){
         sortedMap.insert({p.second,p.first});
     }
-    string res;
+    string res="";
+
     for(auto p :sortedMap){
         res.append(p.first,p.second);
+    }
+    for(auto p :sortedMap){
+        cout<<p.first<<" "<<p.second<<endl;
     }
     return res;
 

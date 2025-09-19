@@ -8,7 +8,7 @@ public:
         this->val=val;
         this->next=NULL;
     }
-};   //     1 2 3 4 5 
+};   
 class MyQueue{
 public:
     Node*front;

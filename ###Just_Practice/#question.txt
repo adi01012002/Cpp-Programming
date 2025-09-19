@@ -1,0 +1,23 @@
+Longest Common Subsequesnces done 
+Longest Common Substring done 
+Permutaion of String   done
+Power Function  done
+SubArray And Substring  done
+SubSet  done
+Tower of Hanoi  done
+Combination Sum 1 done
+SubSet sum Equal to k  done
+GCD of Two Number  done
+House Robber  done
+Total Unique Path  
+Coin Change  done
+Knapsack Problem  done
+maze path   done 
+minimum jump  done
+stair case  done
+
+
+Sliding Window
+Prifix Sum
+Two Pointer
+Binary Search

@@ -11,13 +11,13 @@ public:
         this->val=val;
     }
 };
-TreeNode*helper(vector<int>v,int st,int end){
-    if(st>end)return NULL;
-    int mid=st+(end-st)/2;
-    TreeNode*root=new TreeNode(v[mid]);
-    root->left=helper(v,st,mid-1);
-    root->right=helper(v,mid+1,end);
-    return root;
+TreeNode*helper(vector<int>v,int st,int end){    // here we are using a algo that similar to binary search 
+    if(st>end)return NULL;    // this is same as the condition in side the while loop
+    int mid=st+(end-st)/2;   // findng the mid idx
+    TreeNode*root=new TreeNode(v[mid]);    // Create new Node
+    root->left=helper(v,st,mid-1);   // Searching on left side 
+    root->right=helper(v,mid+1,end); // searching on right side
+    return root;   // return ans;
 }
 TreeNode* sortedArrayToBST(vector<int>v){
     return helper(v,0,v.size()-1);
